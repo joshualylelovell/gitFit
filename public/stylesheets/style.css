@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+  color: blue;
+}
+
+.no-bullets {
+  list-style: none;
+}
+
+.todos {
+  margin-top: 5px;
+}
