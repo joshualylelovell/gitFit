@@ -1,9 +1,12 @@
 {
-  "name": "mean-stack-starter-app",
-  "description": "",
+  "name": "Project3-Fitness",
+  "description": "An app for tracking your fitness goals",
   "main": "",
   "authors": [
-    "Dr. Mike Hopper <drmikeh@gmail.com>"
+    "Benjamin West <benjaminwest1046@gmail.com>",
+    "Beau Murrah <mmurrah@airbridge.ac.nz>",
+    "Cordelle Smith <cordelle.smith@gmail.com>",
+    "Joshua Lovell <joshualylelovell@gmail.com>"
   ],
   "license": "MIT",
   "homepage": "",
