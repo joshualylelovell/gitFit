@@ -1,7 +1,7 @@
 angular.module('myApp')
 .component('goals', {
   template: `
-    <h1>TODOs</h1>
+    <h1>GOALS</h1>
 
     <div class="goals" ng-repeat = "goal in $ctrl.goals">
       <span ng-show="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
