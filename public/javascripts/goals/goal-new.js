@@ -1,47 +1,37 @@
 angular.module('myApp')
-.component('todoEdit', {
+.component('goalNew', {
   template: `
-    <h3>EDIT</h3>
-
+    <h3>NEW</h3>
     <form ng-submit="$ctrl.save()">
-
       <div class="form-group">
         <label for="title">Title</label>
         <input type="text"
                class="form-control"
                name="title"
-               ng-model="$ctrl.todo.title">
+               ng-model="$ctrl.goal.title">
       </div>
-
       <div class="form-group">
         <label for="completed">Completed</label>
         <input type="checkbox"
                class="form-control"
                name="completed"
-               ng-model="$ctrl.todo.completed">
+               ng-model="$ctrl.goal.completed">
       </div>
-
-      <a ng-click="$ctrl.show()" class="btn btn-primary">Back</a>
+      <a ui-sref="goals" class="btn btn-primary">Back</a>
       <button type="submit" class="btn btn-success">Save</button>
     </form>
   `,
-  controller: function(todoService, $state, $stateParams) {
-    this.todo = null;
-
-    this.show = function() {
-      $state.go('todo-show', { id: this.todo._id });
+  controller: function(goalService, $state) {
+    this.goal = {
+      title: '',
+      completed: false
     };
 
     this.save = function() {
-      todoService.update(this.todo)
+      goalService.create(this.goal)
       .then( res => {
-        $state.go('todos');
+        $state.go('goals');
       });
     };
-
-    todoService.getTodo($stateParams.id)
-    .then( res => {
-      this.todo = res.data;
-    });
   }
 });

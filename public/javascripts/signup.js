@@ -96,8 +96,8 @@ angular.module('myApp')
           password: this.user.password
         })
         .then(() => {
-          // Account created, redirect to todos
-          this.$state.go('todos');
+          // Account created, redirect to goals
+          this.$state.go('goals');
         })
         .catch(err => {
           err = err.data;

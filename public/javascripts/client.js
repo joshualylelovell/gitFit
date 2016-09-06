@@ -24,21 +24,21 @@ angular.module('myApp')
     url: "/signup",
     template: "<signup></signup>"
   })
-  .state('todos', {
-    url: "/todos",
-    template: "<todos></todos>"
+  .state('goals', {
+    url: "/goals",
+    template: "<goals></goals>"
   })
-  .state('todo-new', {
-    url: "/todos/new",
-    template: "<todo-new></todo-new>"
+  .state('goal-new', {
+    url: "/goals/new",
+    template: "<goal-new></goal-new>"
   })
-  .state('todo-show', {
-    url: "/todos/:id",
-    template: "<todo-show></todo-show>"
+  .state('goal-show', {
+    url: "/goals/:id",
+    template: "<goal-show></goal-show>"
   })
-  .state('todo-edit', {
-    url: "/todos/edit/:id",
-    template: "<todo-edit></todo-edit>"
+  .state('goal-edit', {
+    url: "/goals/edit/:id",
+    template: "<goal-edit></goal-edit>"
   });
 
 });

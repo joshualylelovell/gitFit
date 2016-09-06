@@ -60,8 +60,8 @@ angular.module('myApp')
           password: this.user.password
         })
         .then(() => {
-          // Logged in, redirect to todos
-          this.$state.go('todos');
+          // Logged in, redirect to goals
+          this.$state.go('goals');
         })
         .catch(err => {
           this.errors.login = err.message;

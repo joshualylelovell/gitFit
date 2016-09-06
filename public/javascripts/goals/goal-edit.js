@@ -1,7 +1,7 @@
 angular.module('myApp')
-.component('todoNew', {
+.component('goalEdit', {
   template: `
-    <h3>NEW</h3>
+    <h3>EDIT</h3>
 
     <form ng-submit="$ctrl.save()">
 
@@ -10,7 +10,7 @@ angular.module('myApp')
         <input type="text"
                class="form-control"
                name="title"
-               ng-model="$ctrl.todo.title">
+               ng-model="$ctrl.goal.title">
       </div>
 
       <div class="form-group">
@@ -18,24 +18,30 @@ angular.module('myApp')
         <input type="checkbox"
                class="form-control"
                name="completed"
-               ng-model="$ctrl.todo.completed">
+               ng-model="$ctrl.goal.completed">
       </div>
 
-      <a ui-sref="todos" class="btn btn-primary">Back</a>
+      <a ng-click="$ctrl.show()" class="btn btn-primary">Back</a>
       <button type="submit" class="btn btn-success">Save</button>
     </form>
   `,
-  controller: function(todoService, $state) {
-    this.todo = {
-      title: '',
-      completed: false
+  controller: function(goalService, $state, $stateParams) {
+    this.goal = null;
+
+    this.show = function() {
+      $state.go('goal-show', { id: this.goal._id });
     };
 
     this.save = function() {
-      todoService.create(this.todo)
+      goalService.update(this.goal)
       .then( res => {
-        $state.go('todos');
+        $state.go('goals');
       });
     };
+
+    goalService.getGoal($stateParams.id)
+    .then( res => {
+      this.goal = res.data;
+    });
   }
 });

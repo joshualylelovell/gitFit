@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var TodoSchema = new mongoose.Schema({
+var GoalSchema = new mongoose.Schema({
   title:     { type: String,  required: true },
   completed: { type: Boolean, required: true },
   user:      { type: mongoose.Schema.Types.ObjectId, ref: 'User'}
@@ -16,17 +16,17 @@ function date2String(date) {
   return date.toLocaleDateString('en-US', options);
 }
 
-TodoSchema.methods.getCreatedAt = function() {
+GoalSchema.methods.getCreatedAt = function() {
   return date2String(this.createdAt);
 };
 
-TodoSchema.methods.getUpdatedAt = function() {
+GoalSchema.methods.getUpdatedAt = function() {
   return date2String(this.updatedAt);
 };
 
-TodoSchema.methods.toString = function() {
+GoalSchema.methods.toString = function() {
   let status = this.completed ? 'completed' : 'not completed';
-  return `Todo: ${this.title} owned by ${this.user.local.email} is ${status}.`;
+  return `Goal: ${this.title} owned by ${this.user.local.email} is ${status}.`;
 };
 
-module.exports = mongoose.model('Todo', TodoSchema);
+module.exports = mongoose.model('Goal', GoalSchema);
