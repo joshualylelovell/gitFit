@@ -4,7 +4,7 @@ mongoose.Promise = require('bluebird');
 var User = require('./models/user');
 var Todo = require('./models/todo');
 
-mongoose.connect('mongodb://localhost/todos');
+mongoose.connect('mongodb://localhost/project3-fitness');
 
 // our script will not exit until we have disconnected from the db.
 function quit() {
