@@ -20,9 +20,13 @@ angular.module('myApp')
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <span class="card-title">This App uses the following Technologies</span>
+              <p>
+              <h3>Client Technologies</h3>
+              <ul class="no-bullets">
+               <li ng-repeat = "tech in $ctrl.clientTechnologies">{{ tech }}</li>
+             </ul>
+              </p>
             </div>
             <div class="card-action">
               <a href="#">This is a link</a>
