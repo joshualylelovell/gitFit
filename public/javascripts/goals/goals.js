@@ -6,7 +6,7 @@ angular.module('myApp')
     <div class="row">
 
       <div class="col s12 m4" ng-repeat = "goal in $ctrl.goals">
-        <div class="card">
+        <div class="card medium">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="http://materializecss.com/images/office.jpg">
           </div>
@@ -18,13 +18,13 @@ angular.module('myApp')
             <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
           </div>
           <div class="card-reveal">
-            <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a>
-            <a ng-click="$ctrl.show(goal)">{{ goal.dateToComplete }}</a>
-            <a ng-click="$ctrl.show(goal)">{{ goal.distance }}</a>
-            <a ng-click="$ctrl.show(goal)">{{ goal.time }}</a>
-            <a ng-click="$ctrl.show(goal)">{{ goal.sets }}</a>
-            <a ng-click="$ctrl.show(goal)">{{ goal.reps }}</a>
-            <a ng-click="$ctrl.show(goal)">{{ goal.muscleGroup }}</a>
+
+             <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a>
+
+
+            <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
+
+
           </div>
         </div>
       </div>
