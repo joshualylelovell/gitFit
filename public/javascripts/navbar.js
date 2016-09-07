@@ -1,42 +1,21 @@
 angular.module('myApp')
 .component('navbar', {
   template: `
-    <nav class="navbar navbar-fixed-top navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" ui-sref="home">
-            <span class="glyphicon glyphicon-home"></span> MEAN Stack Starter App
-          </a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-          <ul class="nav navbar-nav">
-            <li ng-class="{ active: $ctrl.$state.includes('home') }" ><a ui-sref="home">Home</a></li>
-            <li ng-class="{ active: $ctrl.$state.includes('about') }" ><a ui-sref="about">About</a></li>
-            <li ng-show="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('goals') }" ><a ui-sref="goals">Goals</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('login')  }" ><a ui-sref="login">Login</a></li>
-            <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('signup') }" ><a ui-sref="signup">Sign Up</a></li>
-            <p ng-show="$ctrl.Auth.isLoggedIn()" class="navbar-text">Signed in as {{ $ctrl.Auth.getCurrentUserSync().email }}</p>
-            <button ng-show="$ctrl.Auth.isLoggedIn()" type="button" class="btn btn-default navbar-btn" ng-click="$ctrl.logout()">Logout</button>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <nav>
+   <div class="nav-wrapper">
+     <a href="/" class="brand-logo">
+      <i class="material-icons">person_pin</i>
+     </a>
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li ng-class="{ active: $ctrl.$state.includes('home') }" ><a ui-sref="home">Home</a></li>
+      <li ng-show="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('goals') }" ><a ui-sref="goals">Goals</a></li>
+      <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('login')  }" ><a ui-sref="login">Login</a></li>
+      <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('signup') }" ><a ui-sref="signup">Sign Up</a></li>
+      <p ng-show="$ctrl.Auth.isLoggedIn()" class="navbar-text">Hi! {{ $ctrl.Auth.getCurrentUserSync().email }}</p>
+      <button ng-show="$ctrl.Auth.isLoggedIn()" type="button" class="waves-effect waves-light btn" ng-click="$ctrl.logout()">Logout</button>
+     </ul>
+   </div>
+  </nav>
   `,
   controller: function(Auth, $state) {
     this.Auth = Auth;
