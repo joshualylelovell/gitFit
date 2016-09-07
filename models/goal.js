@@ -2,6 +2,12 @@ var mongoose = require('mongoose');
 
 var GoalSchema = new mongoose.Schema({
   title:     { type: String,  required: true },
+  dateToComplete: {type: Date, required: true },
+  distance: Number,
+  time: Number,
+  sets: Number,
+  reps: Number,
+  muscleGroup: String,
   completed: { type: Boolean, required: true },
   user:      { type: mongoose.Schema.Types.ObjectId, ref: 'User'}
   },
