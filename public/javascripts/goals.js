@@ -2,7 +2,7 @@ angular.module('myApp')
 .component('goalNew', {
   template: `
     <h3>NEW</h3>
-    <p>TODO: finish this.</p>
+    <p>GOAL: finish this.</p>
 
     <a ui-sref="goals" class="btn btn-primary">Back</a>
   `,
@@ -17,7 +17,7 @@ angular.module('myApp')
 .component('goalEdit', {
   template: `
     <h3>EDIT</h3>
-    <p>TODO: finish this.</p>
+    <p>GOAL: finish this.</p>
 
     <a ng-click="$ctrl.show()" class="btn btn-primary">Back</a>
   `,
