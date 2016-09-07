@@ -1,6 +1,7 @@
 body {
   background: #485563;
   font-family: 'Source Sans Pro', sans-serif;
+  margin: 25px;
 }
 
 /* Re-styling Materialize */
@@ -44,4 +45,8 @@ nav .brand-logo {
 
 .todos {
   margin-top: 5px;
+}
+
+.fitness-type {
+  color: black;
 }
