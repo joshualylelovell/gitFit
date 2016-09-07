@@ -55,6 +55,12 @@ angular.module('myApp')
       <span ng-show="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
       <span ng-hide="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
       <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a>
+      <a ng-click="$ctrl.show(goal)">{{ goal.dateToComplete }}</a>
+      <a ng-click="$ctrl.show(goal)">{{ goal.distance }}</a>
+      <a ng-click="$ctrl.show(goal)">{{ goal.time }}</a>
+      <a ng-click="$ctrl.show(goal)">{{ goal.sets }}</a>
+      <a ng-click="$ctrl.show(goal)">{{ goal.reps }}</a>
+      <a ng-click="$ctrl.show(goal)">{{ goal.muscleGroup }}</a>
       <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
     </div>
     <a ui-sref="goal-new" class="waves-effect waves-light btn">New</a>

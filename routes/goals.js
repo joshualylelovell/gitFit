@@ -33,6 +33,12 @@ router.get('/', authenticate, function(req, res, next) {
 router.post('/', authenticate, function(req, res, next) {
   var goal = new Goal({
     title: req.body.title,
+    dateToComplete: req.body.dateToComplete,
+    distance: req.body.distance,
+    time: req.body.time,
+    sets: req.body.sets,
+    reps: req.body.reps,
+    muscleGroup: req.body.muscleGroup,
     completed: req.body.completed ? true : false,
     user: req.user
   });
@@ -63,6 +69,12 @@ router.put('/:id', authenticate, function(req, res, next) {
     if (!goal) return next(makeError(res, 'Document not found', 404));
     if (!req.user._id.equals(goal.user)) return next(makeError(res, 'Unauthorized', 401));
     goal.title = req.body.title;
+    goal.dateToComplete = req.body.dateToComplete;
+    goal.distance = req.body.distance;
+    goal.time = req.body.time;
+    goal.sets = req.body.sets;
+    goal.reps = req.body.reps;
+    goal.muscleGroup = req.body.muscleGroup;
     goal.completed = req.body.completed ? true : false;
     return goal.save();
   })

@@ -3,6 +3,11 @@ angular.module('myApp')
   template: `
     <h3>SHOW</h3>
     <p><b>Title: </b>{{ $ctrl.goal.title }}</p>
+    <p><b>Completion Date: </b>{{ $ctrl.goal.dateToComplete }}</p>
+    <p><b>Distance: </b>{{ $ctrl.goal.distance }}</p>
+    <p><b>Sets: </b>{{ $ctrl.goal.sets }}</p>
+    <p><b>Reps: </b>{{ $ctrl.goal.reps }}</p>
+    <p><b>Muscle Group: </b>{{ $ctrl.goal.muscleGroup }}</p>
     <p><b>ID: </b>{{ $ctrl.goal._id }}</p>
     <p><b>Completed: </b>
       <span ng-show="$ctrl.goal.completed" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
