@@ -1,11 +1,43 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #485563;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1, h2 {
-  color: blue;
+/* Re-styling Materialize */
+nav {
+  background-color: transparent;
 }
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+  box-shadow: none;
+}
+
+.navbar-text {
+  margin-top: 0px;
+}
+
+nav .brand-logo {
+  margin-left: 45px;
+}
+
+.btn {
+  background-color: #ef5350;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: #ef5350;
+}
+
+.card {
+  max-width: 30%;
+  margin: 15px;
+  background-color: grey;
+}
+
+.form-control {
+  color: white;
+}
+/* End Materialize overrides*/
 
 .no-bullets {
   list-style: none;
