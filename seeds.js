@@ -40,19 +40,19 @@ Goal.remove({})
 })
 .spread(function(goal1, goal2) {
   console.log('creating some new goals...');
-  var run1    = new Goal({ title: 'First run',  dateToComplete: Date() , distance: 20, time: '300', completed: true, user: goal1._id });
-  var run2   = new Goal({ title: 'Second run',  dateToComplete: Date() , distance: 10, time: '150', completed: false, user: goal1._id });
-  var run3   = new Goal({ title: 'Third run',  dateToComplete: Date() , distance: 5, time: '100', completed: false, user: goal1._id });
-  var run4    = new Goal({ title: 'Fourth run',  dateToComplete: Date() , distance: 20, time: '50', completed: true, user: goal1._id });
-  var run5   = new Goal({ title: 'Fifth run',  dateToComplete: Date() , distance: 10, time: '35', completed: true, user: goal1._id });
-  var run6   = new Goal({ title: 'Sixth run',  dateToComplete: Date() , distance: 5, time: '10', completed: false, user: goal1._id });
+  var run1    = new Goal({ title: 'First run',  dateToComplete: new Date() , distance: 20, time: '300', completed: true, user: goal1._id });
+  var run2   = new Goal({ title: 'Second run',  dateToComplete: new Date() , distance: 10, time: '150', completed: false, user: goal1._id });
+  var run3   = new Goal({ title: 'Third run',  dateToComplete: new Date() , distance: 5, time: '100', completed: false, user: goal1._id });
+  var run4    = new Goal({ title: 'Fourth run',  dateToComplete: new Date() , distance: 20, time: '50', completed: true, user: goal1._id });
+  var run5   = new Goal({ title: 'Fifth run',  dateToComplete: new Date() , distance: 10, time: '35', completed: true, user: goal1._id });
+  var run6   = new Goal({ title: 'Sixth run',  dateToComplete: new Date() , distance: 5, time: '10', completed: false, user: goal1._id });
 
-  var weightlift1 = new Goal({ title: 'First weightlift', dateToComplete: Date(), sets: 20, reps: 20, muscleGroup: "Chest", completed: true, user: goal2._id });
-  var weightlift2 = new Goal({ title: 'Second weightlift', dateToComplete: Date(), sets: 10, reps: 20, muscleGroup: "Legs",completed: true, user: goal2._id });
-  var weightlift3 = new Goal({ title: 'Third weightlift', dateToComplete: Date(), sets: 5, reps: 20, muscleGroup: "Arms",completed: false, user: goal2._id });
-  var weightlift4 = new Goal({ title: 'Fourth weightlift', dateToComplete: Date(), sets: 20, reps: 20, muscleGroup: "Glutes", completed: true, user: goal2._id });
-  var weightlift5 = new Goal({ title: 'Fifth weightlift', dateToComplete: Date(), sets: 10, reps: 20, muscleGroup: "Nose",completed: true, user: goal2._id });
-  var weightlift6 = new Goal({ title: 'Sixth weightlift', dateToComplete: Date(), sets: 10, reps: 20, muscleGroup: "Face",completed: false, user: goal2._id });
+  var weightlift1 = new Goal({ title: 'First weightlift', dateToComplete: new Date(), sets: 20, reps: 20, muscleGroup: "Chest", completed: true, user: goal2._id });
+  var weightlift2 = new Goal({ title: 'Second weightlift', dateToComplete: new Date(), sets: 10, reps: 20, muscleGroup: "Legs",completed: true, user: goal2._id });
+  var weightlift3 = new Goal({ title: 'Third weightlift', dateToComplete: new Date(), sets: 5, reps: 20, muscleGroup: "Arms",completed: false, user: goal2._id });
+  var weightlift4 = new Goal({ title: 'Fourth weightlift', dateToComplete: new Date(), sets: 20, reps: 20, muscleGroup: "Glutes", completed: true, user: goal2._id });
+  var weightlift5 = new Goal({ title: 'Fifth weightlift', dateToComplete: new Date(), sets: 10, reps: 20, muscleGroup: "Nose",completed: true, user: goal2._id });
+  var weightlift6 = new Goal({ title: 'Sixth weightlift', dateToComplete: new Date(), sets: 10, reps: 20, muscleGroup: "Face",completed: false, user: goal2._id });
 
   return Goal.create([run1, run2, run3, run4,run5, run6, weightlift1, weightlift2, weightlift3, weightlift4, weightlift5, weightlift6]);
 
