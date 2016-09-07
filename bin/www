@@ -6,7 +6,7 @@
 
 var app = require('../app');
 //CHANGE
-var debug = require('debug')('mean-stack-starter-app:server');
+var debug = require('debug')('project3-fitness:server');
 var http = require('http');
 
 /**

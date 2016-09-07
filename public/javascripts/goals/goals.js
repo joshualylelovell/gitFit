@@ -5,7 +5,6 @@ angular.module('myApp')
       <div class="divider"></div>
       <div class="section">
         <h2>Upcoming Goals</h2>
-
         <div class="row">
           <div class="col s12 m4" ng-repeat = "goal in $ctrl.goals | filter: { completed: false }">
             <div class="card">
@@ -30,13 +29,12 @@ angular.module('myApp')
               </div>
             </div>
           </div>
-
       </div>
+
       <div class="divider"></div>
       <div class="section">
         <h2>Completed Goals</h2>
         <div class="row">
-
           <div class="col s12 m4" ng-repeat = "goal in $ctrl.goals | filter: { completed: true } | orderBy: 'dateToComplete'">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
@@ -93,10 +91,6 @@ angular.module('myApp')
         this.getGoals();
       });
     };
-
-    this.dateCompare = function() {
-      return true;
-    }
   }
 
 });

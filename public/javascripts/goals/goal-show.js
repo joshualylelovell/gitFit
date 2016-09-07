@@ -5,6 +5,7 @@ angular.module('myApp')
     <p><b>Title: </b>{{ $ctrl.goal.title }}</p>
     <p><b>Completion Date: </b>{{ $ctrl.goal.dateToComplete }}</p>
     <p><b>Distance: </b>{{ $ctrl.goal.distance }}</p>
+    <p><b>Time: </b>{{ $ctrl.goal.time }}</p>
     <p><b>Sets: </b>{{ $ctrl.goal.sets }}</p>
     <p><b>Reps: </b>{{ $ctrl.goal.reps }}</p>
     <p><b>Muscle Group: </b>{{ $ctrl.goal.muscleGroup }}</p>
