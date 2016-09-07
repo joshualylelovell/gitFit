@@ -32,22 +32,33 @@ Goal.remove({})
 })
 .then(function() {
   console.log('creating new users');
-  let joe = new User();
-  joe.local = { email: 'joe@ga.co', password: joe.encrypt('test1234') };
-  let sue = new User();
-  sue.local = { email: 'sue@ga.co', password: sue.encrypt('test1234') };
-  return [User.create(joe), User.create(sue)];
+  let goal1 = new User();
+  goal1.local = { email: 'goal1@ga.co', password: goal1.encrypt('test1234') };
+  let goal2 = new User();
+  goal2.local = { email: 'goal2@ga.co', password: goal2.encrypt('test1234') };
+  return [User.create(goal1), User.create(goal2)];
 })
-.spread(function(joe, sue) {
+.spread(function(goal1, goal2) {
   console.log('creating some new goals...');
-  var groceries    = new Goal({ title: 'groceries',       completed: false, user: joe._id });
-  var feedTheCat   = new Goal({ title: 'feed the cat',    completed: true,  user: joe._id });
-  var learnAngular = new Goal({ title: 'Learn AngularJS', completed: true,  user: sue._id });
-  var updateResume = new Goal({ title: 'Update Resume',   completed: false, user: sue._id });
-  return Goal.create([groceries, feedTheCat, learnAngular, updateResume]);
+  var run1    = new Goal({ title: 'First run',  dateToComplete: Date() , distance: 20, time: '300', completed: true, user: goal1._id });
+  var run2   = new Goal({ title: 'Second run',  dateToComplete: Date() , distance: 10, time: '150', completed: false, user: goal1._id });
+  var run3   = new Goal({ title: 'Third run',  dateToComplete: Date() , distance: 5, time: '100', completed: false, user: goal1._id });
+  var run4    = new Goal({ title: 'Fourth run',  dateToComplete: Date() , distance: 20, time: '50', completed: true, user: goal1._id });
+  var run5   = new Goal({ title: 'Fifth run',  dateToComplete: Date() , distance: 10, time: '35', completed: true, user: goal1._id });
+  var run6   = new Goal({ title: 'Sixth run',  dateToComplete: Date() , distance: 5, time: '10', completed: false, user: goal1._id });
+
+  var weightlift1 = new Goal({ title: 'First weightlift', dateToComplete: Date(), sets: 20, reps: 20, muscleGroup: "Chest", completed: true, user: goal2._id });
+  var weightlift2 = new Goal({ title: 'Second weightlift', dateToComplete: Date(), sets: 10, reps: 20, muscleGroup: "Legs",completed: true, user: goal2._id });
+  var weightlift3 = new Goal({ title: 'Third weightlift', dateToComplete: Date(), sets: 5, reps: 20, muscleGroup: "Arms",completed: false, user: goal2._id });
+  var weightlift4 = new Goal({ title: 'Fourth weightlift', dateToComplete: Date(), sets: 20, reps: 20, muscleGroup: "Glutes", completed: true, user: goal2._id });
+  var weightlift5 = new Goal({ title: 'Fifth weightlift', dateToComplete: Date(), sets: 10, reps: 20, muscleGroup: "Nose",completed: true, user: goal2._id });
+  var weightlift6 = new Goal({ title: 'Sixth weightlift', dateToComplete: Date(), sets: 10, reps: 20, muscleGroup: "Face",completed: false, user: goal2._id });
+
+  return Goal.create([run1, run2, run3, run4,run5, run6, weightlift1, weightlift2, weightlift3, weightlift4, weightlift5, weightlift6]);
+
 })
 .then(function(savedGoals) {
-  console.log('Just saved', savedGoals.length, 'goals.');
+  console.log('Saved...', savedGoals.length, 'goals.');
   return Goal.find({}).populate('user');
 })
 .then(function(allGoals) {
@@ -63,7 +74,9 @@ Goal.remove({})
 
 
 
-
+//completed: { type: Boolean, required: true },
+// user:      { type: mongoose.Schema.Types.ObjectId, ref: 'User'}
+//  },
 
 
 // var mongoose = require('mongoose');
@@ -122,4 +135,3 @@ Goal.remove({})
 // }, function(err) {
 //   return handleError(err);
 // });
->>>>>>> 54bcd08b0472275d732d34008c93c580a7bcb1c9
