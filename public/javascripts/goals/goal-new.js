@@ -12,7 +12,6 @@ angular.module('myApp')
                name="title"
                ng-model="$ctrl.goal.title">
       </div>
-
       <div class="form-group">
         <label for="dateToComplete">Completion Date</label>
         <input type="date"
@@ -33,6 +32,13 @@ angular.module('myApp')
                class="form-control"
                name="time"
                ng-model="$ctrl.goal.time">
+      </div>
+      <div class="form-group">
+        <label for="sets">How many sets can you do?</label>
+        <input type="number"
+               class="form-control"
+               name="sets"
+               ng-model="$ctrl.goal.sets">
       </div>
       <div class="form-group">
         <label for="reps">How many reps can you do?</label>

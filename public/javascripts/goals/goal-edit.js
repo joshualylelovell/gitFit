@@ -34,6 +34,13 @@ angular.module('myApp')
                ng-model="$ctrl.goal.time">
       </div>
       <div class="form-group">
+        <label for="sets">How many sets can you do?</label>
+        <input type="number"
+               class="form-control"
+               name="sets"
+               ng-model="$ctrl.goal.sets">
+      </div>
+      <div class="form-group">
         <label for="reps">How many reps can you do?</label>
         <input type="number"
                class="form-control"
