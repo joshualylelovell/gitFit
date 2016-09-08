@@ -63,14 +63,6 @@ angular.module('myApp')
                name="muscleGroup"
                ng-model="$ctrl.goal.muscleGroup">
       </div>
-
-      <div class="form-group">
-        <label for="completed">Completed</label>
-        <input type="checkbox"
-               class="form-control"
-               name="completed"
-               ng-model="$ctrl.goal.completed">
-      </div>
       <a ui-sref="goals" class="btn btn-primary">Back</a>
       <button type="submit" class="btn btn-success">Save</button>
     </form>
