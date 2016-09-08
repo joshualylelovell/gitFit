@@ -7,6 +7,6 @@ angular.module('myApp')
   </section>
   `,
   controller: function() {
-    this.name = 'MEAN Stack Starter App';
+    this.name = 'Project 3 Fitness App';
   }
 });
