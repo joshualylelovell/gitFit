@@ -18,13 +18,15 @@ angular.module('myApp')
                 <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
               </div>
               <div class="card-reveal">
-                <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.dateToComplete }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.distance }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.time }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.sets }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.reps }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.muscleGroup }}</a>
+                <ul>
+                  <li><a ng-click="$ctrl.show(goal)">{{ goal.title }}</a></li>
+                  <li><a ng-click="$ctrl.show(goal)">{{ goal.dateToComplete }}</a></li>
+                  <li><a ng-click="$ctrl.show(goal)">{{ goal.distance }}</a></li>
+                  <li><a ng-click="$ctrl.show(goal)">{{ goal.time }}</a></li>
+                  <li><a ng-click="$ctrl.show(goal)">{{ goal.sets }}</a></li>
+                  <li><a ng-click="$ctrl.show(goal)">{{ goal.reps }}</a></li>
+                  <li><a ng-click="$ctrl.show(goal)">{{ goal.muscleGroup }}</a></li>
+                </ul>
               </div>
             </div>
           </div>
