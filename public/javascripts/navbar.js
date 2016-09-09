@@ -4,6 +4,7 @@ angular.module('myApp')
   <nav>
    <div class="nav-wrapper">
      <a href="/" class="brand-logo">
+      {{ $ctrl.name }}
       <i class="material-icons">person_pin</i>
      </a>
      <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -18,6 +19,7 @@ angular.module('myApp')
   </nav>
   `,
   controller: function(Auth, $state) {
+    this.name = "Project 3 Fitness App";
     this.Auth = Auth;
     this.$state = $state;
 
