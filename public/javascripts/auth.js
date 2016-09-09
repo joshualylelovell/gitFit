@@ -26,6 +26,7 @@ angular.module('myApp')
     return $http.post('/login', credentials)
     .then(res => {
       currentUser = res.data;
+      console.log(res);
     })
     .catch(err => {
       console.log('ERROR:', err);

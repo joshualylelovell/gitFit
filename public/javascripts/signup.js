@@ -42,10 +42,15 @@ angular.module('myApp')
                                               'has-error': form.password.$invalid && $ctrl.submitted }">
             <label>Password</label>
 
-            <input type="password" name="password" class="form-control" ng-model="$ctrl.user.password"
-                   ng-minlength="3"
-                   required
-                   mongoose-error/>
+            <input type="{{$ctrl.inputType}}" name="password" ng-model="$ctrl.user.password"
+                               ng-minlength="3"
+                               required
+                               mongoose-error/>
+              <input type="checkbox" id="checkbox" ng-model="passwordCheckbox" ng-click="$ctrl.hideShowPassword($ctrl.inputType)" />
+              <label for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+              <label for="checkbox" ng-if="!passwordCheckbox">Show password</label>
+            </div>
+
             <p class="help-block"
                ng-show="(form.password.$error.minlength || form.password.$error.required) && $ctrl.submitted">
               Password must be at least 3 characters.
@@ -53,18 +58,18 @@ angular.module('myApp')
             <p class="help-block" ng-show="form.password.$error.mongoose">
               {{ $ctrl.errors.password }}
             </p>
-          </div>
+
 
           <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && $ctrl.submitted,
                                               'has-error': form.confirmPassword.$invalid && $ctrl.submitted }">
             <label>Confirm Password</label>
             <input type="password" name="confirmPassword" class="form-control" ng-model="$ctrl.user.confirmPassword"
-                   match="$ctrl.user.password"
+                   ng-keyup = "$ctrl.match = ($ctrl.user.confirmPassword === $ctrl.user.password)"
                    ng-minlength="3"
                    required
                    mongoose-error/>
             <p class="help-block"
-               ng-show="form.confirmPassword.$error.match && $ctrl.submitted">
+               ng-show="!$ctrl.match && $ctrl.submitted">
               Passwords must match.
             </p>
           </div>
@@ -81,14 +86,24 @@ angular.module('myApp')
     <hr>
   </div>
   `,
+
   controller: function(Auth, $state) {
     this.Auth = Auth;
     this.$state = $state;
+    this.inputType = 'password';
+
+    this.hideShowPassword = function(inputType){
+        if (this.inputType == 'password')
+      this.inputType = 'text';
+        else
+      this.inputType = 'password';
+    };
+
 
     this.register = function(form) {
       this.submitted = true;
 
-      if (form.$valid) {
+      if (form.$valid & $ctrl.match) {
         return this.Auth.createUser({
           name: this.user.name,
           email: this.user.email,

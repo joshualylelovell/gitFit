@@ -4,6 +4,7 @@ var User            = require('../../models/user');
 var strategy = new LocalStrategy({
     usernameField : 'email',                 // default is 'username'
     passwordField : 'password',
+    nameField : 'name',
     passReqToCallback : true
   }, function(req, email, password, callback) {
     // Search for a user with this email

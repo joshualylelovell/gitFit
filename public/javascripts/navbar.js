@@ -11,7 +11,7 @@ angular.module('myApp')
       <li ng-show="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('goals') }" ><a ui-sref="goals">Goals</a></li>
       <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('login')  }" ><a ui-sref="login">Login</a></li>
       <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('signup') }" ><a ui-sref="signup">Sign Up</a></li>
-      <p ng-show="$ctrl.Auth.isLoggedIn()" class="navbar-text">Hi! {{ $ctrl.Auth.getCurrentUserSync().name }}</p>
+      <p ng-show="$ctrl.Auth.isLoggedIn()" class="navbar-text">Hi! {{ $ctrl.Auth.getCurrentUserSync().email }}</p>
       <button ng-show="$ctrl.Auth.isLoggedIn()" type="button" class="waves-effect waves-light btn" ng-click="$ctrl.logout()">Logout</button>
      </ul>
    </div>
