@@ -4,7 +4,10 @@
   height: auto;
   width: auto;
 }
-
+.nav-wrapper {
+  max-width: 90%;
+  width: auto;
+}
 
 
 body {
