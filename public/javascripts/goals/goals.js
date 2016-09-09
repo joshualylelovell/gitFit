@@ -22,7 +22,7 @@ angular.module('myApp')
                   <li> <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a></li>
                   <li>{{ goal.dateToComplete }}</li>
                   <li ng-show="goal.title === 'Running'">Distance (in miles): {{ goal.distance }}</li>
-                  <li ng-show="goal.title === 'Running'">Time to Complete goal (in minutes): {{ goal.time }}</li>
+                  <li ng-show="goal.title === 'Running'">Time to complete goal (in minutes): {{ goal.time }}</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Number of sets: {{ goal.sets }}</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Number of reps: {{ goal.reps }}</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Muscle group to focus on: {{ goal.muscleGroup }}</li>
@@ -53,9 +53,9 @@ angular.module('myApp')
                   <li> <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a></li>
                   <li>{{ goal.dateToComplete }}</li>
                   <li ng-show="goal.title === 'Running'">Distance (in miles): {{ goal.distance }}</li>
-                  <li ng-show="goal.title === 'Running'">Time to Complete goal (in minutes): {{ goal.time }}</li>
-                  <li ng-show="goal.title === 'Weight Lifting'">Number of sets: {{ goal.sets }}</li>
-                  <li ng-show="goal.title === 'Weight Lifting'">Number of reps: {{ goal.reps }}</li>
+                  <li ng-show="goal.title === 'Running'">Time it took to complete goal (in minutes): {{ goal.time }}</li>
+                  <li ng-show="goal.title === 'Weight Lifting'">Number of sets completed: {{ goal.sets }}</li>
+                  <li ng-show="goal.title === 'Weight Lifting'">Number of reps completed: {{ goal.reps }}</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Muscle group to focus on: {{ goal.muscleGroup }}</li>
                 </ul>
               </div>
