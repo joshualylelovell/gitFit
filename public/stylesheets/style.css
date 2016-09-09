@@ -1,3 +1,12 @@
+#pullup {
+  max-height: 900px;
+  max-width:  900px;
+  height: auto;
+  width: auto;
+}
+
+
+
 body {
   background: #485563;
   font-family: 'Source Sans Pro', sans-serif;

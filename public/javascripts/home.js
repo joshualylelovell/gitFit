@@ -4,7 +4,7 @@ angular.module('myApp')
   {{ $ctrl.parallax() }}
 
    <div class="parallax-container">
-    <div class="parallax"><img src="https://hd.unsplash.com/photo-1427384906349-30452365b5e8" alt="parallax1"></div>
+    <div class="parallax"><img src="http://imgur.com/2lkgFB8.jpeg" alt="parallax1"></div>
   </div>
   <div class="section grey">
     <div class="row container">
@@ -13,7 +13,7 @@ angular.module('myApp')
     </div>
   </div>
   <div class="parallax-container">
-    <div class="parallax"><img src="https://hd.unsplash.com/photo-1434754205268-ad3b5f549b11" alt="parallax2"></div>
+    <div class="parallax"><img src="http://imgur.com/SXSnSQX.jpeg" alt="parallax2" id="pullup"></div>
   </div>
 
 
