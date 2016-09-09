@@ -4,11 +4,11 @@ angular.module('myApp')
     <h3>SHOW</h3>
     <p><b>Goal: </b>{{ $ctrl.goal.title }}</p>
     <p><b>Completion Date: </b>{{ $ctrl.goal.dateToComplete }}</p>
-    <p><b>Distance: </b>{{ $ctrl.goal.distance }}</p>
-    <p><b>Time: </b>{{ $ctrl.goal.time }}</p>
-    <p><b>Sets: </b>{{ $ctrl.goal.sets }}</p>
-    <p><b>Reps: </b>{{ $ctrl.goal.reps }}</p>
-    <p><b>Muscle Group: </b>{{ $ctrl.goal.muscleGroup }}</p>
+    <p ng-show="$ctrl.goal.title === 'Running'"><b>Distance: </b>{{ $ctrl.goal.distance }}</p>
+    <p ng-show="$ctrl.goal.title === 'Running'"><b>Time: </b>{{ $ctrl.goal.time }}</p>
+    <p ng-show="$ctrl.goal.title === 'Weight Lifting'"><b>Sets: </b>{{ $ctrl.goal.sets }}</p>
+    <p ng-show="$ctrl.goal.title === 'Weight Lifting'"><b>Reps: </b>{{ $ctrl.goal.reps }}</p>
+    <p ng-show="$ctrl.goal.title === 'Weight Lifting'"><b>Muscle Group: </b>{{ $ctrl.goal.muscleGroup }}</p>
     <p><b>You created this: </b>{{ $ctrl.goal.createdAt | date : "medium" }}</p>
     <p><b>You last updated this: </b>{{ $ctrl.goal.updatedAt | date : "medium" }}</p>
 
