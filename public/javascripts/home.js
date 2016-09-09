@@ -13,7 +13,7 @@ angular.module('myApp')
     </div>
   </div>
   <div class="parallax-container">
-    <div class="parallax"><img src="../images/fitsplash.jpeg" alt="parallax2"></div>
+    <div class="parallax"><img src="https://hd.unsplash.com/photo-1434754205268-ad3b5f549b11" alt="parallax2"></div>
   </div>
 
 
