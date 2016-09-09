@@ -33,8 +33,10 @@ Goal.remove({})
 .then(function() {
   console.log('creating new users');
   let goal1 = new User();
+  goal1.name = "Goal1 Name";
   goal1.local = { email: 'goal1@ga.co', password: goal1.encrypt('test1234') };
   let goal2 = new User();
+  goal2.name = "Goal2 Name";
   goal2.local = { email: 'goal2@ga.co', password: goal2.encrypt('test1234') };
   return [User.create(goal1), User.create(goal2)];
 })
