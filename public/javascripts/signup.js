@@ -60,7 +60,9 @@ angular.module('myApp')
             <label>Confirm Password</label>
             <input type="password" name="confirmPassword" class="form-control" ng-model="$ctrl.user.confirmPassword"
                    match="$ctrl.user.password"
-                   ng-minlength="3" required/>
+                   ng-minlength="3"
+                   required
+                   mongoose-error/>
             <p class="help-block"
                ng-show="form.confirmPassword.$error.match && $ctrl.submitted">
               Passwords must match.
@@ -71,9 +73,6 @@ angular.module('myApp')
             <button class="btn btn-inverse btn-lg btn-register" type="submit">
               Sign up
             </button>
-            <a class="btn btn-default btn-lg btn-login" ui-sref="login">
-              Login
-            </a>
           </div>
 
         </form>
