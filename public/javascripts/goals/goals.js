@@ -18,8 +18,8 @@ angular.module('myApp')
                 <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
               </div>
               <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><a ng-click="$ctrl.show(goal)">{{ goal.title }}</a><i class="material-icons right">close</i></span>
                 <ul>
-                  <li> <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a></li>
                   <li>{{ goal.dateToComplete }}</li>
                   <li ng-show="goal.title === 'Running'">Distance (in miles): {{ goal.distance }}</li>
                   <li ng-show="goal.title === 'Running'">Time to complete goal (in minutes): {{ goal.time }}</li>
