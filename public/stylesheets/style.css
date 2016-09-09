@@ -8,6 +8,20 @@
   max-width: 90%;
   width: auto;
 }
+.hcard {
+  display: inline;
+}
+.cardbox {
+  display: flex;
+  flex-direction: row;
+}
+/*.section, .grey {
+  width: 100%;
+}
+.row, .container {
+  width: 80%;
+}*/
+
 
 
 body {
