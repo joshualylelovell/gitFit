@@ -30,6 +30,7 @@ GoalSchema.methods.getUpdatedAt = function() {
   return date2String(this.updatedAt);
 };
 
+
 GoalSchema.methods.toString = function() {
   let status = this.completed ? 'completed' : 'not completed';
   return `Goal: ${this.title} owned by ${this.user.local.email} is ${status}.`;
