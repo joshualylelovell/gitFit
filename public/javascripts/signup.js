@@ -60,19 +60,7 @@ angular.module('myApp')
             </p>
 
 
-          <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && $ctrl.submitted,
-                                              'has-error': form.confirmPassword.$invalid && $ctrl.submitted }">
-            <label>Confirm Password</label>
-            <input type="password" name="confirmPassword" class="form-control" ng-model="$ctrl.user.confirmPassword"
-                   ng-keyup = "$ctrl.match = ($ctrl.user.confirmPassword === $ctrl.user.password)"
-                   ng-minlength="3"
-                   required
-                   mongoose-error/>
-            <p class="help-block"
-               ng-show="!$ctrl.match && $ctrl.submitted">
-              Passwords must match.
-            </p>
-          </div>
+
 
           <div>
             <button class="btn btn-inverse btn-lg btn-register" type="submit">
@@ -103,7 +91,7 @@ angular.module('myApp')
     this.register = function(form) {
       this.submitted = true;
 
-      if (form.$valid & $ctrl.match) {
+      if (form.$valid) {
         return this.Auth.createUser({
           name: this.user.name,
           email: this.user.email,
