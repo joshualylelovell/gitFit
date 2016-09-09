@@ -8,9 +8,13 @@ angular.module('myApp')
         <div class="row">
           <div class="col s12 m4" ng-repeat = "goal in $ctrl.goals | filter: { completed: false }">
             <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="http://materializecss.com/images/office.jpg">
+              <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Running'">
+                <img class="activator" src="http://i.imgur.com/KIRUeAJ.jpg">
               </div>
+              <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Weight Lifting'">
+                <img class="activator" src="http://i.imgur.com/loqxXqm.jpg">
+              </div>
+
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{ goal.title }}<i class="material-icons right">more_vert</i></span>
                 <span ng-show="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
@@ -38,8 +42,11 @@ angular.module('myApp')
         <div class="row">
           <div class="col s12 m4" ng-repeat = "goal in $ctrl.goals | filter: { completed: true } | orderBy: 'dateToComplete'">
             <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="http://materializecss.com/images/office.jpg">
+              <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Running'">
+                <img class="activator" src="http://i.imgur.com/KIRUeAJ.jpg">
+              </div>
+              <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Weight Lifting'">
+                <img class="activator" src="http://i.imgur.com/loqxXqm.jpg">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{ goal.title }}<i class="material-icons right">more_vert</i></span>
