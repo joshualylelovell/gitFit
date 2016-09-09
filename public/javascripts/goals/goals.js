@@ -49,13 +49,15 @@ angular.module('myApp')
                 <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
               </div>
               <div class="card-reveal">
-                <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.dateToComplete }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.distance }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.time }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.sets }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.reps }}</a>
-                <a ng-click="$ctrl.show(goal)">{{ goal.muscleGroup }}</a>
+                <ul>
+                  <li> <a ng-click="$ctrl.show(goal)">{{ goal.title }}</a></li>
+                  <li>{{ goal.dateToComplete }}</li>
+                  <li ng-show="goal.title === 'Running'">Distance (in miles): {{ goal.distance }}</li>
+                  <li ng-show="goal.title === 'Running'">Time to Complete goal (in minutes): {{ goal.time }}</li>
+                  <li ng-show="goal.title === 'Weight Lifting'">Number of sets: {{ goal.sets }}</li>
+                  <li ng-show="goal.title === 'Weight Lifting'">Number of reps: {{ goal.reps }}</li>
+                  <li ng-show="goal.title === 'Weight Lifting'">Muscle group to focus on: {{ goal.muscleGroup }}</li>
+                </ul>
               </div>
             </div>
           </div>
