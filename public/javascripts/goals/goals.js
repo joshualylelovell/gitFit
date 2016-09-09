@@ -88,6 +88,7 @@ angular.module('myApp')
       });
     };
 
+
     this.delete = function(goal) {
       goalService.delete(goal)
       .then( res => {

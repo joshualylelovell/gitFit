@@ -18,7 +18,7 @@ angular.module('myApp')
       <div class="form-group">
         <label for="dateToComplete">Completion Date</label>
         <input type="date"
-               class="form-control"
+               class="datepicker"
                name="dateToComplete"
                ng-model="$ctrl.goal.dateToComplete">
       </div>
