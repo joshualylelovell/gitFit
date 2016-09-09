@@ -36,9 +36,7 @@ angular.module('myApp')
             <button class="btn btn-inverse btn-lg btn-login" type="submit">
               Login
             </button>
-            <a class="btn btn-default btn-lg btn-register" ui-sref="signup">
-              Register
-            </a>
+
           </div>
         </form>
       </div>
