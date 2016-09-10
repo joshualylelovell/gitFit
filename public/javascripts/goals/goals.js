@@ -43,7 +43,6 @@ angular.module('myApp')
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{ goal.title }}<i class="material-icons right">more_vert</i></span>
-                <span class="card-title activator grey-text text-darken-4">{{ goal.dateToComplete }}<i class="material-icons right">more_vert</i></span>
                 <span ng-show="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                 <span ng-hide="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
                 <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
