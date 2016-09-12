@@ -32,3 +32,6 @@ angular.module('myApp')
     };
   }
 });
+
+// Removed Home from Navbar
+//         <li ng-class="{ active: $ctrl.$state.includes('home') }" ><a ui-sref="home">Home</a></li>
