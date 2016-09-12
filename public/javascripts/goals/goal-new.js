@@ -61,7 +61,7 @@ angular.module('myApp')
       <button type="submit" class="btn btn-success">Save</button>
     </form>
   `,
-  controller: function(goalService, $state) {
+  controller: function(goalService, $state, Auth) {
     this.goal = {
       title: '',
       completed: false

@@ -17,7 +17,7 @@ angular.module('myApp')
     <!-- I could not get the opts to work this way:
     <!-- <a ui-sref="goal-edit" ui-sref-opts="{ id: $ctrl.goal._id }" class="btn btn-primary">Edit</a> -->
   `,
-  controller: function(goalService, $state, $stateParams) {
+  controller: function(goalService, $state, $stateParams, Auth) {
     this.goal = null;
 
     this.edit = function() {

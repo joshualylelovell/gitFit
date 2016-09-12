@@ -70,7 +70,7 @@ angular.module('myApp')
 
   `,
 
-  controller: function(goalService, $state) {
+  controller: function(goalService, $state, Auth) {
     this.goals = null;
 
     this.getGoals = function() {
@@ -106,10 +106,3 @@ angular.module('myApp')
   }
 
 });
-
-
-
-
-
-
-
