@@ -56,7 +56,7 @@ angular.module('myApp')
 </div>
   `,
   controller: function() {
-    this.name = 'Project 3 Fitness App';
+    this.name = 'gitFit';
     this.parallax = function(){
                     console.log('Parallax JQuery init works in home.js');
                     $('.parallax').parallax();

@@ -21,7 +21,7 @@ angular.module('myApp')
 </div>
   `,
   controller: function(Auth, $state) {
-    this.name = "Project 3 Fitness App";
+    this.name = "gitFit";
     this.Auth = Auth;
     this.$state = $state;
 
