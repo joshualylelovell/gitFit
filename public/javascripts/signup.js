@@ -63,7 +63,7 @@ angular.module('myApp')
 
 
           <div>
-            <button class="btn btn-inverse btn-lg btn-register" type="submit">
+            <button class="btn btn-inverse btn-lg btn-register green" type="submit">
               Sign up
             </button>
           </div>
