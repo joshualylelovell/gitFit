@@ -29,7 +29,7 @@ angular.module('myApp')
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"><a ng-click="$ctrl.show(goal)">{{ goal.title }}</a><i class="material-icons right">close</i></span>
                 <ul>
-                  <li ng-show="goal.title === 'Running'">Distance: {{ goal.distance }}</li>
+                  <li ng-show="goal.title === 'Running'">Distance: {{ goal.distance }} miles</li>
                   <li ng-show="goal.title === 'Running'">Time to complete goal: {{ goal.time }} minutes</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Number of sets: {{ goal.sets }} sets</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Number of reps: {{ goal.reps }} reps</li>

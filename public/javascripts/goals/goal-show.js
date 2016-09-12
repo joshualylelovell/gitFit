@@ -12,8 +12,8 @@ angular.module('myApp')
     <p><b>You created this: </b>{{ $ctrl.goal.createdAt | date : "medium" }}</p>
     <p><b>You last updated this: </b>{{ $ctrl.goal.updatedAt | date : "medium" }}</p>
 
-    <a ui-sref="goals" class="btn btn-primary">Back</a>
-    <a ng-click="$ctrl.edit(goal)" class="btn btn-warning">Edit</a>
+    <a ui-sref="goals" class="btn yellow">Back</a>
+    <a ng-click="$ctrl.edit(goal)" class="btn blue ">Edit</a>
     <!-- I could not get the opts to work this way:
     <!-- <a ui-sref="goal-edit" ui-sref-opts="{ id: $ctrl.goal._id }" class="btn btn-primary">Edit</a> -->
   `,
