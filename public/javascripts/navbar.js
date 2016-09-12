@@ -9,7 +9,6 @@ angular.module('myApp')
         <i class="icon ion-ios-body"></i>
        </a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li ng-class="{ active: $ctrl.$state.includes('home') }" ><a ui-sref="home">Home</a></li>
         <li ng-show="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('goals') }" ><a ui-sref="goals">Goals</a></li>
         <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('login')  }" ><a ui-sref="login">Login</a></li>
         <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('signup') }" ><a ui-sref="signup">Sign Up</a></li>
@@ -33,3 +32,6 @@ angular.module('myApp')
     };
   }
 });
+
+// Removed Home from Navbar
+//         <li ng-class="{ active: $ctrl.$state.includes('home') }" ><a ui-sref="home">Home</a></li>

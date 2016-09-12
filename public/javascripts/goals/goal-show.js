@@ -1,7 +1,7 @@
 angular.module('myApp')
 .component('goalShow', {
   template: `
-    <h3>SHOW</h3>
+    <h3>This is your goal!</h3>
     <p><b>Goal: </b>{{ $ctrl.goal.title }}</p>
     <p><b>Completion Date: </b>{{ $ctrl.goal.dateToComplete }}</p>
     <p ng-show="$ctrl.goal.title === 'Running'"><b>Distance: </b>{{ $ctrl.goal.distance }}</p>
@@ -17,7 +17,7 @@ angular.module('myApp')
     <!-- I could not get the opts to work this way:
     <!-- <a ui-sref="goal-edit" ui-sref-opts="{ id: $ctrl.goal._id }" class="btn btn-primary">Edit</a> -->
   `,
-  controller: function(goalService, $state, $stateParams) {
+  controller: function(goalService, $state, $stateParams, Auth) {
     this.goal = null;
 
     this.edit = function() {
