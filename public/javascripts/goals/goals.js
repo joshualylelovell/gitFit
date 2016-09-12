@@ -69,7 +69,7 @@ angular.module('myApp')
                   <li ng-show="goal.title === 'Running'">Time to complete goal: {{ goal.time }} minutes</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Number of sets: {{ goal.sets }} sets</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Number of reps: {{ goal.reps }} reps</li>
-                  <li ng-show="goal.title === 'Weight Lifting'">Muscle group to focus on: {{ goal.muscleGroup }}</li>
+                  <li ng-show="goal.title === 'Weight Lifting'">Muscle group focused on: {{ goal.muscleGroup }}</li>
                 </ul>
               </div>
             </div>
