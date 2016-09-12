@@ -79,7 +79,10 @@ angular.module('myApp')
       goalService.getGoals()
       .then( res => {
         this.goals = res.data;
-      });
+      })
+      .then( function() {
+        toastr.info("Welcome to gitFit!")
+      })
     };
 
     this.getGoals();
