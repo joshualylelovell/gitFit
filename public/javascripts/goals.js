@@ -21,7 +21,7 @@ angular.module('myApp')
 
     <a ng-click="$ctrl.show()" class="btn btn-primary">Back</a>
   `,
-  controller: function(goalService, $state, $stateParams) {
+  controller: function(goalService, $state, $stateParams, Auth) {
     this.goalService = goalService;
     this.$state = $state;
     this.goal = null;

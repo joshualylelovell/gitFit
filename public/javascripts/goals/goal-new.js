@@ -61,11 +61,7 @@ angular.module('myApp')
       <button type="submit" class="btn btn-success">Save</button>
     </form>
   `,
-  controller: function(goalService, $state) {
-    // this.datepicker = $('.datepicker').pickadate({
-    // selectMonths: true, // Creates a dropdown to control month
-    // selectYears: 15 // Creates a dropdown of 15 years to control year
-  // });
+  controller: function(goalService, $state, Auth) {
     this.goal = {
       title: '',
       completed: false

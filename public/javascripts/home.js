@@ -55,7 +55,7 @@ angular.module('myApp')
   </div>
 </div>
   `,
-  controller: function() {
+  controller: function(Auth, $state) {
     this.name = 'gitFit';
     this.parallax = function(){
                     console.log('Parallax JQuery init works in home.js');
