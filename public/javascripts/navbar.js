@@ -6,7 +6,7 @@ angular.module('myApp')
      <div class="nav-wrapper">
        <a href="/" class="brand-logo">
         {{ $ctrl.name }}
-        <i class="material-icons">person_pin</i>
+        <i class="icon ion-ios-body"></i>
        </a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li ng-class="{ active: $ctrl.$state.includes('home') }" ><a ui-sref="home">Home</a></li>
