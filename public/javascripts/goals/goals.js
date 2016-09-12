@@ -1,7 +1,7 @@
 angular.module('myApp')
 .component('goals', {
   template: `
-    <h1>GOALS</h1> <a ui-sref="goal-new" class="waves-effect waves-light btn">New</a>
+    <h1>GOALS</h1> <a ui-sref="goal-new" class="waves-effect waves-light btn green">New</a>
       <div class="divider"></div>
       <div class="section">
         <h2>Upcoming Goals</h2>
