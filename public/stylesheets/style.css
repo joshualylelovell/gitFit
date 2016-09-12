@@ -1,3 +1,29 @@
+#pullup {
+  max-height: 900px;
+  max-width:  900px;
+  height: auto;
+  width: auto;
+}
+.nav-wrapper {
+  max-width: 90%;
+  width: auto;
+}
+.hcard {
+  display: inline;
+}
+.cardbox {
+  display: flex;
+  flex-direction: row;
+}
+/*.section, .grey {
+  width: 100%;
+}
+.row, .container {
+  width: 80%;
+}*/
+
+
+
 body {
   background: #485563;
   font-family: 'Source Sans Pro', sans-serif;
@@ -53,3 +79,5 @@ nav .brand-logo {
 .fitness-type {
   color: black;
 }
+
+

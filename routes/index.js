@@ -4,7 +4,7 @@ var passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Mean Stack Starter App' });
+  res.render('index', { title: 'gitFit' });
 });
 
 // =============================================================
@@ -23,7 +23,7 @@ router.post('/signup', function(req, res, next) {
     }
     req.login(user, function(err) {
       if (err) return res.status(401).json(error);
-      res.json( { email: user.local.email });
+      res.json( { email: user.local.email, name: user.name } );
     });
   })(req, res, next);
 });
@@ -40,7 +40,7 @@ router.post('/login', function(req, res, next) {
     }
     req.login(user, function(err) {
       if (err) return res.status(401).json(error);
-      res.json( { email: user.local.email } );
+      res.json( { email: user.local.email, name: user.name } );
     });
   })(req, res, next);
 });

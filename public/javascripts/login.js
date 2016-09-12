@@ -18,7 +18,10 @@ angular.module('myApp')
           <div class="form-group">
             <label>Password</label>
 
-            <input type="password" name="password" class="form-control" ng-model="$ctrl.user.password" required>
+            <input type="{{$ctrl.inputType}}" name="password" class="form-control" ng-model="$ctrl.user.password" required>
+              <input type="checkbox" id="checkbox" ng-model="passwordCheckbox" ng-click="$ctrl.hideShowPassword($ctrl.inputType)" />
+              <label for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+              <label for="checkbox" ng-if="!passwordCheckbox">Show password</label>
           </div>
 
           <div class="form-group has-error">
@@ -36,9 +39,7 @@ angular.module('myApp')
             <button class="btn btn-inverse btn-lg btn-login" type="submit">
               Login
             </button>
-            <a class="btn btn-default btn-lg btn-register" ui-sref="signup">
-              Register
-            </a>
+
           </div>
         </form>
       </div>
@@ -50,6 +51,14 @@ angular.module('myApp')
     this.Auth = Auth;
     this.$state = $state;
     this.errors = {};
+    this.inputType = 'password';
+
+    this.hideShowPassword = function(inputType){
+        if (this.inputType == 'password')
+      this.inputType = 'text';
+        else
+      this.inputType = 'password';
+    };
 
     this.login = function(form) {
       this.submitted = true;
