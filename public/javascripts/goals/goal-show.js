@@ -1,7 +1,7 @@
 angular.module('myApp')
 .component('goalShow', {
   template: `
-    <h3>SHOW</h3>
+    <h3>This is your goal!</h3>
     <p><b>Goal: </b>{{ $ctrl.goal.title }}</p>
     <p><b>Completion Date: </b>{{ $ctrl.goal.dateToComplete }}</p>
     <p ng-show="$ctrl.goal.title === 'Running'"><b>Distance: </b>{{ $ctrl.goal.distance }}</p>
