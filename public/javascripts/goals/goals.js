@@ -16,15 +16,15 @@ angular.module('myApp')
               </div>
 
               <div class="card-content">
-
-                <span class="card-title activator grey-text text-darken-4">{{ goal.title }}<i class="medium material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">{{ goal.title }} Goal<i class="medium material-icons right">more_vert</i></span>
+                <p>Due:</p>
+                <span class="datespan">{{ goal.dateToComplete  | date:'EEEE, MMMM d, y' }}</span>
                 <br>
-                <span> Due on {{ goal.dateToComplete }} </span>
-
+                <p>Completed:</p>
+                <span ng-show="goal.completed" ng-click="$ctrl.toggle(goal)" class="left glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <span ng-hide="goal.completed" ng-click="$ctrl.toggle(goal)" class="left glyphicon glyphicon-unchecked" aria-hidden="true"></span>
                 <br>
-                <span ng-show="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                <span ng-hide="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-
+                <br>
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"><a ng-click="$ctrl.show(goal)">{{ goal.title }}</a><i class="material-icons right">close</i></span>
@@ -37,8 +37,8 @@ angular.module('myApp')
                   <br>
                   <br>
                 </ul>
-                <h4><span class="grey-text text-darken-4">Delete:</span></h4>
-                    <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
+                    <button ng-click="$ctrl.edit(goal)" class="waves-effect waves-light btn">Edit</button>
+                    <button ng-click="$ctrl.delete(goal)" class="waves-effect waves-light btn">Delete</button>
               </div>
             </div>
           </div>
@@ -98,14 +98,16 @@ angular.module('myApp')
       $state.go('goal-show', { id: goal._id});
     };
 
+    this.edit = function(goal) {
+      $state.go('goal-edit', { id: goal._id});
+    };
+
     this.toggle = function(goal) {
       goalService.toggle(goal)
       .then( res => {
         this.getGoals();
       });
     };
-
-
     this.delete = function(goal) {
       goalService.delete(goal)
       .then( res => {
