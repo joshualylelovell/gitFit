@@ -69,6 +69,7 @@ angular.module('myApp')
 
 
   `,
+
   controller: function(goalService, $state) {
     this.goals = null;
 
@@ -102,3 +103,10 @@ angular.module('myApp')
   }
 
 });
+
+
+
+
+
+
+
