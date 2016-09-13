@@ -1,8 +1,8 @@
 angular.module('myApp')
 .component('home', {
   template: `
-<div class="outer-parallax">
-   <div class="parallax-container">
+  <div class="outer-parallax">
+    <div class="parallax-container">
     <div class="parallax"><img src="http://imgur.com/2lkgFB8.jpeg" alt="parallax1"></div>
   </div>
   <div class="section grey">
