@@ -82,13 +82,31 @@ angular.module('myApp')
   controller: function(goalService, $state, Auth) {
     this.goals = null;
 
+    toastr.options = {
+      "closeButton": false,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "5000",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut",
+    }
+
     this.getGoals = function() {
       goalService.getGoals()
       .then( res => {
         this.goals = res.data;
       })
       .then( function() {
-        toastr.info("Welcome to gitFit!")
+        toastr.success("Welcome to gitFit," + Auth.getCurrentUserSync().name);
       })
     };
 
