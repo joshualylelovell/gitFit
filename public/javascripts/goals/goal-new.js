@@ -45,7 +45,7 @@ angular.module('myApp')
                ng-model="$ctrl.goal.sets">
       </div>
       <div class="form-group" ng-show="$ctrl.goal.title === 'Weight Lifting'">
-        <label for="reps">How many reps can you do?</label>
+        <label for="reps">How many reps per set can you do?</label>
         <input type="number"
                class="form-control"
                name="reps"
