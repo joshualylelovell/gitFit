@@ -87,6 +87,8 @@ a:hover {
   background-color: grey;
   border: solid 3px;
   border-style: groove;
+  height: auto;
+  width: auto;
 }
 
 .form-control {

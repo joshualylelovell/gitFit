@@ -1,3 +1,4 @@
+'use strict'
 angular.module('myApp')
 .component('goals', {
   template:
@@ -7,7 +8,7 @@ angular.module('myApp')
       <div class="section">
         <h2>Upcoming Goals</h2>
         <div class="row">
-          <div class="col s12 m4" ng-repeat = "goal in $ctrl.goals | filter: { completed: false }">
+          <div class="col l4" ng-repeat = "goal in $ctrl.goals | filter: { completed: false }">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Running'">
                 <img class="activator" src="http://i.imgur.com/KIRUeAJ.jpg">
@@ -16,7 +17,7 @@ angular.module('myApp')
                 <img class="activator" src="http://i.imgur.com/loqxXqm.jpg">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">{{ goal.title }} Goal<i class="medium material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">{{ goal.title }}<i class="medium material-icons right">more_vert</i></span>
                 <p>Due:</p>
                 <span class="datespan">{{ goal.dateToComplete  | date:'EEEE, MMMM d, y' }}</span>
                 <br>
@@ -48,7 +49,7 @@ angular.module('myApp')
       <div class="section">
         <h2>Completed Goals</h2>
         <div class="row">
-          <div class="col s12 m4" ng-repeat = "goal in $ctrl.goals | filter: { completed: true } | orderBy: 'dateToComplete'">
+          <div class="col l4" ng-repeat = "goal in $ctrl.goals | filter: { completed: true } | orderBy: 'dateToComplete'">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Running'">
                 <img class="activator" src="http://i.imgur.com/KIRUeAJ.jpg">
@@ -102,12 +103,19 @@ angular.module('myApp')
     }
 
     this.getGoals = function() {
+      var goalCount = 0;
       goalService.getGoals()
       .then( res => {
         this.goals = res.data;
+        goalCount = this.goals.length;
+        console.log(this.goals.length)
       })
       .then( function() {
-        toastr.success("Welcome to gitFit," + Auth.getCurrentUserSync().name);
+        if (Auth.getCurrentUserSync().name) {
+          toastr.success("Welcome to gitFit, " + Auth.getCurrentUserSync().name + '! ' + 'You have ' + goalCount.toString() + " total goals");
+        } else {
+          toastr.success("Welcome to gitFit!");
+        }
       })
     };
 
