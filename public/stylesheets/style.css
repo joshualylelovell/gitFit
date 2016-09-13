@@ -27,8 +27,14 @@
 .row, .container {
   width: 80%;
 }*/
-
-
+.toast {
+    background-color: #51a351;
+    border-radius: 6px;
+}
+.toast-top-right {
+    margin-top: 45px;
+    border-radius: 3px;
+}
 
 body {
   background: #485563;
@@ -40,6 +46,11 @@ body {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   color: white;
 }
+
+nav .brand-logo {
+    position: static;
+}
+
 nav {
   background-color: transparent;
 }
@@ -54,6 +65,11 @@ nav {
 
 nav .brand-logo {
   margin-left: 45px;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .btn {
@@ -90,3 +106,7 @@ nav .brand-logo {
   color: black;
 }
 
+.edit-container {
+  max-width: 500px;
+  margin: auto;
+}

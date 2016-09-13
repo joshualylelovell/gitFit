@@ -1,7 +1,9 @@
 angular.module('myApp')
 .component('goalEdit', {
   template: `
-    <h3>EDIT</h3>
+  <div class="edit-container">
+    <h4>Change your mind? No problem!</h4><br>
+    <h5>Update your goal here:</h5>
 
     <form ng-submit="$ctrl.save()">
 
@@ -55,9 +57,10 @@ angular.module('myApp')
                ng-model="$ctrl.goal.muscleGroup">
       </div>
 
-      <a ng-click="$ctrl.show()" class="btn btn-primary">Back</a>
+      <a ui-sref="goals" class="btn btn-primary">Back</a>
       <button type="submit" class="btn btn-success">Save</button>
     </form>
+  </div>
   `,
   controller: function(goalService, $state, $stateParams, Auth) {
     this.goal = null;
