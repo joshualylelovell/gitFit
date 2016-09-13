@@ -1,6 +1,7 @@
 angular.module('myApp')
 .component('goals', {
-  template: `
+  template:
+  `
     <h1>GOALS</h1> <a ui-sref="goal-new" class="waves-effect waves-light btn green">New</a>
       <div class="divider"></div>
       <div class="section">
@@ -26,7 +27,7 @@ angular.module('myApp')
                 <br>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><a ng-click="$ctrl.show(goal)">{{ goal.title }}</a><i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">{{ goal.title }}<i class="material-icons right">close</i></span>
                 <ul>
                   <li ng-show="goal.title === 'Running'">Distance: {{ goal.distance }} miles</li>
                   <li ng-show="goal.title === 'Running'">Time to complete goal: {{ goal.time }} minutes</li>
@@ -62,8 +63,10 @@ angular.module('myApp')
                 <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><a ng-click="$ctrl.show(goal)">{{ goal.title }}</a><i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">{{ goal.title }}<i class="material-icons right">close</i></span>
+
                 <ul>
+                  <li>Completed: {{ goal.dateToComplete  | date:'EEEE, MMMM d, y' }}</li>
                   <li ng-show="goal.title === 'Running'">Distance: {{ goal.distance }} miles</li>
                   <li ng-show="goal.title === 'Running'">Time to complete goal: {{ goal.time }} minutes</li>
                   <li ng-show="goal.title === 'Weight Lifting'">Number of sets: {{ goal.sets }} sets</li>
@@ -74,8 +77,6 @@ angular.module('myApp')
             </div>
           </div>
     </div>
-
-
   `,
 
   controller: function(goalService, $state, Auth) {

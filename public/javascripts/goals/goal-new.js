@@ -1,7 +1,8 @@
 angular.module('myApp')
 .component('goalNew', {
   template: `
-    <h3>NEW FITNESS GOAL</h3>
+  <div class="edit-container">
+    <h3>Let's set up that new goal:</h3><br>
 
     <form ng-submit="$ctrl.save()">
 
@@ -60,6 +61,7 @@ angular.module('myApp')
       <a ui-sref="goals" class="btn btn-primary">Back</a>
       <button type="submit" class="btn btn-success">Save</button>
     </form>
+  </div>
   `,
   controller: function(goalService, $state, Auth) {
     this.goal = {
