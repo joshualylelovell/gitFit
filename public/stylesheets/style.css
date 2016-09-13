@@ -19,7 +19,7 @@
 }
 .cardbox {
   display: flex;
-  flex-direction: row;
+  align-items: center;
 }
 /*.section, .grey {
   width: 100%;
