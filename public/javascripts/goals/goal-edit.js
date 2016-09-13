@@ -55,7 +55,7 @@ angular.module('myApp')
                ng-model="$ctrl.goal.muscleGroup">
       </div>
 
-      <a ng-click="$ctrl.show()" class="btn btn-primary">Back</a>
+      <a ui-sref="goals" class="btn btn-primary">Back</a>
       <button type="submit" class="btn btn-success">Save</button>
     </form>
   `,
