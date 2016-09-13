@@ -4,7 +4,7 @@ angular.module('myApp')
    <div ng-show="$ctrl.$state.includes('home')" class="navbar-fixed">
     <nav>
      <div class="nav-wrapper">
-       <a href="/" class="brand-logo">
+       <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
         <i class="icon ion-ios-body"></i>
        </a>
@@ -21,7 +21,7 @@ angular.module('myApp')
 
     <nav ng-show="$ctrl.$state.includes('goals')">
      <div class="nav-wrapper">
-       <a href="/" class="brand-logo">
+       <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
         <i class="icon ion-ios-body"></i>
        </a>
@@ -37,7 +37,7 @@ angular.module('myApp')
 
     <nav ng-show="$ctrl.$state.includes('login')">
      <div class="nav-wrapper">
-       <a href="/" class="brand-logo">
+       <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
         <i class="icon ion-ios-body"></i>
        </a>
@@ -53,7 +53,7 @@ angular.module('myApp')
 
     <nav ng-show="$ctrl.$state.includes('signup')">
      <div class="nav-wrapper">
-       <a href="/" class="brand-logo">
+       <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
         <i class="icon ion-ios-body"></i>
        </a>
@@ -69,7 +69,7 @@ angular.module('myApp')
 
     <nav ng-show="$ctrl.$state.includes('goal-edit')">
      <div class="nav-wrapper">
-       <a href="/" class="brand-logo">
+       <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
         <i class="icon ion-ios-body"></i>
        </a>
@@ -85,7 +85,7 @@ angular.module('myApp')
 
     <nav ng-show="$ctrl.$state.includes('goal-new')">
      <div class="nav-wrapper">
-       <a href="/" class="brand-logo">
+       <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
         <i class="icon ion-ios-body"></i>
        </a>
