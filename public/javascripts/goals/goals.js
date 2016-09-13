@@ -15,7 +15,6 @@ angular.module('myApp')
               <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Weight Lifting'">
                 <img class="activator" src="http://i.imgur.com/loqxXqm.jpg">
               </div>
-
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{ goal.title }} Goal<i class="medium material-icons right">more_vert</i></span>
                 <p>Due:</p>
