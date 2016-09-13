@@ -12,7 +12,7 @@ angular.module('myApp')
         <li ng-show="$ctrl.Auth.isLoggedIn()"><a ui-sref="goals">Goals</a></li>
         <li ng-hide="$ctrl.Auth.isLoggedIn()"><a ui-sref="login">Login</a></li>
         <li ng-hide="$ctrl.Auth.isLoggedIn()"><a ui-sref="signup">Sign Up</a></li>
-        <p ng-show="$ctrl.Auth.isLoggedIn()" class="navbar-text"> Hi, {{ $ctrl.Auth.getCurrentUserSync().name }}!</p>
+        <p ng-show="$ctrl.Auth.isLoggedIn() && $ctrl.Auth.getCurrentUserSync().name" class="navbar-text hide-on-med-and-down"> Hi, {{ $ctrl.Auth.getCurrentUserSync().name }}!</p>
         <button ng-show="$ctrl.Auth.isLoggedIn()" type="button" class="waves-effect waves-light btn" ng-click="$ctrl.logout()">Logout</button>
        </ul>
      </div>

@@ -1,3 +1,4 @@
+'use strict'
 angular.module('myApp')
 .component('goals', {
   template: `
@@ -101,12 +102,19 @@ angular.module('myApp')
     }
 
     this.getGoals = function() {
+      var goalCount = 0;
       goalService.getGoals()
       .then( res => {
         this.goals = res.data;
+        goalCount = this.goals.length;
+        console.log(this.goals.length)
       })
       .then( function() {
-        toastr.success("Welcome to gitFit," + Auth.getCurrentUserSync().name);
+        if (Auth.getCurrentUserSync().name) {
+          toastr.success("Welcome to gitFit, " + Auth.getCurrentUserSync().name + '! ' + 'You have ' + goalCount.toString() + " total goals");
+        } else {
+          toastr.success("Welcome to gitFit!");
+        }
       })
     };
 
