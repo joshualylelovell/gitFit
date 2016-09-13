@@ -19,7 +19,7 @@
 }
 .cardbox {
   display: flex;
-  flex-direction: row;
+  align-items: center;
 }
 /*.section, .grey {
   width: 100%;
@@ -104,4 +104,9 @@ a:hover {
 
 .fitness-type {
   color: black;
+}
+
+.edit-container {
+  max-width: 500px;
+  margin: auto;
 }
