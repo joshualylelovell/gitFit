@@ -3,7 +3,7 @@ angular.module('myApp')
   template:
   `
     <h1>GOALS</h1> <a ui-sref="goal-new" class="waves-effect waves-light btn green">New</a>
-      <div class="divider"></div>
+
       <div class="section">
         <h2>Upcoming Goals</h2>
         <div class="row">
@@ -59,12 +59,13 @@ angular.module('myApp')
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{ goal.title }}<i class="material-icons right">more_vert</i></span>
                 <span ng-show="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                <span ng-hide="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                <span ng-hide="goal.completed" ng-click="$ctrl.toggle(goal)" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span><br>
+                <span ng-show="goal.title === 'Weight Lifting'" style="font-size: 20px">Muscle group you just killed: {{ goal.muscleGroup }}</span>
+                <span ng-show="goal.title === 'Running'" style="font-size: 20px">Distance covered: {{ goal.distance }} miles</span><br><br>
                 <button ng-click="$ctrl.delete(goal)" class="btn btn-xs btn-danger">X</button>
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">{{ goal.title }}<i class="material-icons right">close</i></span>
-
                 <ul>
                   <li>Completed: {{ goal.dateToComplete  | date:'EEEE, MMMM d, y' }}</li>
                   <li ng-show="goal.title === 'Running'">Distance: {{ goal.distance }} miles</li>
