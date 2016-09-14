@@ -1,3 +1,4 @@
 node_modules
 bower_components
 cardtest.html
+public/dist/app.min.js
