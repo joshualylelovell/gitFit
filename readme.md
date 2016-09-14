@@ -35,3 +35,25 @@ This project aims to meet the specifications outlined in the WDI Curriculum: [Pr
 TBD
 
 #### Version updates:
+
+
+#### User Stories:
+
+Maryann is a attorney that always has a full schedule. She constantly tries to fit working out into her daily regimen, but with all of the paperwork she handles on a regular basis she finds it hard to keep track of the notebook that she writes her workouts in. Luckily for her, she found the gitFit web app. With gitFit, she can not only access her workouts from anywhere, but she can monitor the details of her workouts and check them off as they are completed. She can create and delete new goals at her leisure and no longer has to worry about that pesky notebook.
+(../public/pictures/screen-shot1.png)
+
+
+Brian works out every day. He is training for a marathon that is coming up in three months and uses the gitFit app to schedule his runs ahead of time. He takes satisfaction in checking off his running goals and having them switch from the "Upcoming" category to the "Completed" category. That small action gives him the motivation to continue his training and compete at an elevated level. He plans to continue his use of the app even after his marathon, as he has plans to dabble in weight training afterwards.
+(../public/pictures/screen-shot2.png)
+
+
+Charlamagne hates working out. He needs to work out because he was informed by his doctor that his health is in jeopardy, but he finds it hard to get motivated. The only thing that keeps him going back on a regular basis is his gitFit app. A wave of guilt washes over him every time he allows one of his goals to expire without having been completed, so he does his best not to let it happen often. Charlamagne has been seeing improvements in his health since using the app, and he has recommended it to his friends.
+(../public/pictures/screen-shot3.png)
+
+
+
+
+
+
+
+
