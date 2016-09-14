@@ -25,10 +25,10 @@
   display: inline;
 }
 
-.cardbox {
+/*.cardbox {
   display: flex;
   align-items: center;
-}
+}*/
 
 /*.section, .grey {
   width: 100%;
@@ -110,8 +110,8 @@ a:hover {
   background-color: grey;
   border: solid 3px;
   border-style: groove;
-  height: auto;
-  width: auto;
+  /*height: auto;
+  width: auto;*/
 }
 
 .form-control {
@@ -121,6 +121,14 @@ a:hover {
 
 .no-bullets {
   list-style: none;
+}
+
+#cardcolumns {
+  margin: none;
+}
+
+.row .col.l4 {
+  margin: none;
 }
 
 .todos {
@@ -134,4 +142,18 @@ a:hover {
 .edit-container {
   max-width: 500px;
   margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: none;
+}
+
+@media only screen and (min-width: 993px) {
+  .row .col.l4 {
+    left: auto;
+    right: auto;
+  }
 }

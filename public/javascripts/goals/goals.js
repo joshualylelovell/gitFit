@@ -8,7 +8,7 @@ angular.module('myApp')
       <div class="section">
         <h2>Upcoming Goals</h2>
         <div class="row">
-          <div class="col m4 l4" ng-repeat = "goal in $ctrl.goals | filter: { completed: false }">
+          <div class="col l4" ng-repeat = "goal in $ctrl.goals | filter: { completed: false }">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Running'">
                 <img class="activator" src="http://i.imgur.com/KIRUeAJ.jpg">
@@ -42,13 +42,14 @@ angular.module('myApp')
               </div>
             </div>
           </div>
+        </div>
       </div>
 
       <div class="divider"></div>
       <div class="section">
         <h2>Completed Goals</h2>
         <div class="row">
-          <div class="col l4" ng-repeat = "goal in $ctrl.goals | filter: { completed: true } | orderBy: 'dateToComplete'">
+          <div class="col l4" id="cardcolumn"s ng-repeat = "goal in $ctrl.goals | filter: { completed: true } | orderBy: 'dateToComplete'">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Running'">
                 <img class="activator" src="http://i.imgur.com/KIRUeAJ.jpg">
