@@ -16,7 +16,6 @@ angular.module('myApp')
       <p></b>
 
       <div class="cardbox col s12 m6"">
-
        <div class="card large">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="https://i.imgur.com/FVeFwgB.jpg">
@@ -45,18 +44,14 @@ angular.module('myApp')
                     <button ng-click="$ctrl.delete(goal)" class="waves-effect waves-light btn">Delete</button>
               </div>
             </div>
-
           </div>
-        <p>
-        Paragraph about the card
-
-        </p>
-    </div>
-  </div>
+        </div>
+      </div>
   <div class="parallax-container">
     <div class="parallax"><img src="http://imgur.com/SXSnSQX.jpeg" alt="parallax2" id="pullup"></div>
   </div>
-</div>
+  </div>
+
   `,
   controller: function(Auth, $state) {
     this.name = 'gitFit';

@@ -101,6 +101,8 @@ angular.module('myApp')
       "hideMethod": "fadeOut",
     }
 
+    var firstLogin = true;
+
     this.getGoals = function() {
       var goalCount = 0;
       goalService.getGoals()
@@ -110,11 +112,15 @@ angular.module('myApp')
         console.log(this.goals.length)
       })
       .then( function() {
-        if (Auth.getCurrentUserSync().name) {
-          toastr.success("Welcome to gitFit, " + Auth.getCurrentUserSync().name + '! ' + 'You have ' + goalCount.toString() + " total goals");
-        } else {
-          toastr.success("Welcome to gitFit!");
+        if (firstLogin) {
+          if (Auth.getCurrentUserSync().name) {
+            toastr.success("Welcome to gitFit, " + Auth.getCurrentUserSync().name + '! ' + 'You have ' + goalCount.toString() + " total goals");
+          } else {
+            toastr.success("Welcome to gitFit!");
+          }
+          firstLogin = false;
         }
+
       })
     };
 

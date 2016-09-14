@@ -36,10 +36,20 @@
     border-radius: 3px;
 }
 
+.profile {
+  max-width: 30%;
+}
+.about {
+  color: white;
+}
+
+.tech {
+  margin-bottom: 15px;
+}
+
 body {
   background: #485563;
   font-family: 'Source Sans Pro', sans-serif;
-  margin: 25px;
 }
 
 /* Re-styling Materialize */
