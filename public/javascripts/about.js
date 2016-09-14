@@ -46,7 +46,7 @@ angular.module('myApp')
 
   </section>
   `,
-  controller: function() {
+  controller: function(Auth, $state) {
     this.clientTechnologies = [
       'Angular 1.5',
       'Twitter Bootstrap',
