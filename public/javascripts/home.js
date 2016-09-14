@@ -3,7 +3,7 @@ angular.module('myApp')
   template: `
   <div class="outer-parallax">
     <div class="parallax-container">
-    <div class="parallax"><img src="http://imgur.com/2lkgFB8.jpeg" alt="parallax1"></div>
+    <div class="parallax"><img src="/images/2lkgFB8.jpeg" alt="parallax1"></div>
   </div>
 
   <div class="section grey">
@@ -48,7 +48,7 @@ angular.module('myApp')
         </div>
       </div>
   <div class="parallax-container">
-    <div class="parallax"><img src="http://imgur.com/SXSnSQX.jpeg" alt="parallax2" id="pullup"></div>
+    <div class="parallax"><img src="/images/SXSnSQX.jpeg" alt="parallax2" id="pullup"></div>
   </div>
   </div>
 
