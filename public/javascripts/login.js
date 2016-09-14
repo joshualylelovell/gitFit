@@ -44,7 +44,7 @@ angular.module('myApp')
         </form>
       </div>
     </div>
-    <hr>
+  
   </div>
   `,
   controller: function(Auth, $state) {

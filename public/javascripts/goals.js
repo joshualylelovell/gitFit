@@ -11,7 +11,7 @@ angular.module('myApp')
     this.$state = $state;
     this.goal = null;
     this.Auth = Auth;
-    
+
   }
 });
 
@@ -35,7 +35,6 @@ angular.module('myApp')
     goalService.getGoal($stateParams.id)
     .then( res => {
       this.goal = res.data;
-      console.log('this.goal:', JSON.stringify(this.goal));
     });
   }
 });

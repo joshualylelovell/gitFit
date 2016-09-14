@@ -6,7 +6,7 @@ angular.module('myApp')
      <div class="nav-wrapper">
        <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
-        <i class="icon ion-ios-body"></i>
+        <i class="material-icons">directions_run</i>
        </a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li ng-hide="$ctrl.Auth.isLoggedIn()" ng-classes="{ active: $ctrl.$state.includes('home') }"><a href="#about">About</a></li>
