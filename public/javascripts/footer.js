@@ -28,5 +28,7 @@ angular.module('myApp')
         </footer>
   `,
   controller: function(Auth, $state) {
+    this.Auth = Auth;
+    this.$state = $state;
   }
 });

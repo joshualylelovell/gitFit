@@ -54,6 +54,8 @@ angular.module('myApp')
 
   `,
   controller: function(Auth, $state) {
+    this.Auth = Auth;
+    this.$state = $state;
     this.name = 'gitFit';
     this.demoGoal = { title:  'Demo Running',
                     dateToComplete: '12-25-2016',
