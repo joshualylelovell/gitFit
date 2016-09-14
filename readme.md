@@ -1,8 +1,6 @@
-# project-3
+# Team 1 Project 3 WDI 7: 'gitFit' (formerly Fitness ToDo-ish app)
 
-# Team 1 Project 3 WDI 7: 'Fitness ToDo-ish app'
-
-This is the ReadMe for the 'Fitness ToDo-ish app' under development by Team 1 from WDI 7 comprised of:
+This is the ReadMe for gitFit under development by Team 1 from WDI 7 comprised of:
 
 >* [J Lovell](https://github.com/joshualyle)
 * [B Murrah](https://github.com/airbr)
@@ -10,10 +8,13 @@ This is the ReadMe for the 'Fitness ToDo-ish app' under development by Team 1 fr
 * [B West](https://github.com/benjaminwest1046)
 
 
-#### Git Repo
+#### Git Repository
 
-The master branch of this project as at date is at [coredelle/project-3](https://github.com/coredelle/project-3)
+The master branch of this project as at date is at [benjaminwest1046/project3-fitness](https://github.com/benjaminwest1046/project3-fitness)
 
+#### Heroku Deployment
+
+A dist of this project has been deployed on [Heroku at gitfit-wdi](https://gitfit-wdi.herokuapp.com/)
 
 #### Project specifications:
 
@@ -25,13 +26,20 @@ This project aims to meet the specifications outlined in the WDI Curriculum: [Pr
 
 #### Technologies:
 
-* Materialize
-* AngularJS
+This app utilizes the MEAN Stack including:
+
+* HTML5
+* CSS3
+* Materialize CSS Library
+* Javascript
+* Node JS (MEA**N**)
+* Express JS (M**E**AN)
+* Angular JS (ME**A**N)
 * Mongoose
-* MongoDB
+* MongoDB (**M**EAN)
+* Toastr non-blocking notifications library
 
 #### Resources:
 
-TBD
 
-#### Version updates:
+#### Development notes:
