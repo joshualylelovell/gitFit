@@ -1,45 +1,68 @@
 .datespan {
   font-size: 1.5rem;
 }
+.completedgoal {
+  font-size: 1.5rem;
+}
+
 .glyphicon {
   font-size: 2.5rem;
 }
+
 #pullup {
   max-height: 900px;
   max-width:  900px;
   height: auto;
   width: auto;
 }
+
 .nav-wrapper {
   max-width: 90%;
   width: auto;
 }
+
 .hcard {
   display: inline;
 }
+
 .cardbox {
   display: flex;
   align-items: center;
 }
+
 /*.section, .grey {
   width: 100%;
 }
 .row, .container {
   width: 80%;
 }*/
+
 .toast {
     background-color: #51a351;
     border-radius: 6px;
 }
+
 .toast-top-right {
     margin-top: 45px;
     border-radius: 3px;
 }
 
+.profile {
+  max-width: 30%;
+}
+
+.about {
+  color: white;
+}
+
+.tech {
+  margin-bottom: 15px;
+}
+
 body {
   background: #485563;
   font-family: 'Source Sans Pro', sans-serif;
-  margin: 25px;
+  margin: 20px;
 }
 
 /* Re-styling Materialize */
