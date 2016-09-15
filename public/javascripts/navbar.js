@@ -24,7 +24,7 @@ angular.module('myApp')
      <div class="nav-wrapper">
        <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
-        <i class="icon ion-ios-body"></i>
+        <i class="material-icons">directions_run</i>
        </a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li ng-show="$ctrl.Auth.isLoggedIn()" ><a href="#about">About</a></li>
@@ -41,7 +41,7 @@ angular.module('myApp')
      <div class="nav-wrapper">
        <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
-        <i class="icon ion-ios-body"></i>
+        <i class="material-icons">directions_run</i>
        </a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#about">About</a></li>
@@ -58,7 +58,7 @@ angular.module('myApp')
      <div class="nav-wrapper">
        <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
-        <i class="icon ion-ios-body"></i>
+        <i class="material-icons">directions_run</i>
        </a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#about">About</a></li>
@@ -75,7 +75,7 @@ angular.module('myApp')
      <div class="nav-wrapper">
        <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
-        <i class="icon ion-ios-body"></i>
+        <i class="material-icons">directions_run</i>
        </a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li ng-show="$ctrl.Auth.isLoggedIn()" ><a href="#about">About</a></li>
@@ -92,7 +92,7 @@ angular.module('myApp')
      <div class="nav-wrapper">
        <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
-        <i class="icon ion-ios-body"></i>
+        <i class="material-icons">directions_run</i>
        </a>
        <ul id="nav-mobile" class="right">
         <li ng-show="$ctrl.Auth.isLoggedIn()" ><a href="#about">About</a></li>
@@ -109,7 +109,7 @@ angular.module('myApp')
      <div class="nav-wrapper">
        <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
-        <i class="icon ion-ios-body"></i>
+        <i class="material-icons">directions_run</i>
        </a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li ng-show="$ctrl.Auth.isLoggedIn()" ng-class="{ active: $ctrl.$state.includes('goals') }" ><a ui-sref="goals">Goals</a></li>
