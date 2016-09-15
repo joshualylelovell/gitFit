@@ -119,7 +119,7 @@ angular.module('myApp')
       .then( function() {
         if (firstLogin) {
           if (Auth.getCurrentUserSync().name) {
-            toastr.success("Welcome to gitFit, " + Auth.getCurrentUserSync().name + '! ' + 'You have ' + goalCount.toString() + " total goals");
+            toastr.success("Welcome, " + Auth.getCurrentUserSync().name + '! ' + 'You have ' + goalCount.toString() + " goals");
           } else {
             toastr.success("Welcome to gitFit!");
           }

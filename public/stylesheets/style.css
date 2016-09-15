@@ -40,6 +40,7 @@
 .toast {
     background-color: #51a351;
     border-radius: 6px;
+    width: 125px;
 }
 
 .toast-top-right {
