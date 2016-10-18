@@ -11,10 +11,10 @@ angular.module('myApp')
           <div class="col l4" ng-repeat = "goal in $ctrl.goals | filter: { completed: false }">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Running'">
-                <img class="activator" src="http://i.imgur.com/KIRUeAJ.jpg">
+                <img class="activator" src="https://i.imgur.com/KIRUeAJ.jpg">
               </div>
               <div class="card-image waves-effect waves-block waves-light" ng-show="goal.title === 'Weight Lifting'">
-                <img class="activator" src="http://i.imgur.com/loqxXqm.jpg">
+                <img class="activator" src="https://i.imgur.com/loqxXqm.jpg">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{ goal.title }}<i class="medium material-icons right">more_vert</i></span>
