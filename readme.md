@@ -1,16 +1,11 @@
-# Team 1 Project 3 WDI 7: 'gitFit' (formerly Fitness ToDo-ish app)
+# Team 1 Project 3 WDI 7: 'gitFit'
 
 This is the ReadMe for gitFit under development by Team 1 from WDI 7 comprised of:
 
->* [J Lovell](https://github.com/joshualyle)
+>* [J Lovell](https://github.com/joshualylelovell)
 * [B Murrah](https://github.com/airbr)
 * [C Smith](https://github.com/coredelle)
 * [B West](https://github.com/benjaminwest1046)
-
-
-#### Git Repository
-
-The master branch of this project as at date is at [benjaminwest1046/project3-fitness](https://github.com/benjaminwest1046/project3-fitness)
 
 #### Heroku Deployment
 
@@ -20,9 +15,7 @@ A dist of this project has been deployed on [Heroku at gitfit-wdi](https://gitfi
 
 This project aims to meet the specifications outlined in the WDI Curriculum: [Project 3 Requirements](https://github.com/ATL-WDI-Curriculum/projects/blob/master/project3.md)
 
-#### Trello
-
-[The Trello for this project is/should be publicly viewable at this link](https://trello.com/b/6o7h6Y7U/project3-fitness-todo-ish-app)
+#### [Trello](https://trello.com/b/6o7h6Y7U/project3-fitness-todo-ish-app)
 
 #### Technologies:
 
@@ -68,4 +61,3 @@ Charlamagne hates working out. He needs to work out because he was informed by h
 
 
 #### Development notes:
-
