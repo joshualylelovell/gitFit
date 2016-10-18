@@ -4,7 +4,7 @@ angular.module('myApp')
    <div ng-show="$ctrl.$state.includes('home')" class="navbar-fixed">
     <nav>
      <div class="nav-wrapper">
-       <a href="https://github.com/benjaminwest1046/project3-fitness" target="_blank" class="brand-logo">
+       <a href="https://github.com/joshualylelovell/gitfit" target="_blank" class="brand-logo">
         {{ $ctrl.name }}
         <i class="material-icons">directions_run</i>
        </a>

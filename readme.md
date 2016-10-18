@@ -9,7 +9,7 @@ This is the ReadMe for gitFit under development by Team 1 from WDI 7 comprised o
 
 #### Heroku Deployment
 
-A dist of this project has been deployed on [Heroku at gitfit-wdi](https://gitfit-wdi.herokuapp.com/)
+A dist of this project has been deployed on Heroku at [needto-gitfit](https://needto-gitfit.herokuapp.com/)
 
 #### Project specifications:
 
@@ -33,8 +33,6 @@ This app utilizes the MEAN Stack including:
 * Toastr non-blocking notifications library
 
 #### Resources:
-
-
 
 #### Version updates:
 
