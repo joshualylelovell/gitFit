@@ -43,7 +43,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(session({ secret: 'WDI Rocks!',
+app.use(session({ secret: 'gitFit works?',
                   resave: true,
                   saveUninitialized: true }));
 app.use(passport.initialize());
