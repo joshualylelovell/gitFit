@@ -25,17 +25,9 @@
   display: inline;
 }
 
-/*.cardbox {
-  display: flex;
-  align-items: center;
-}*/
-
-/*.section, .grey {
-  width: 100%;
+#cardbox {
+  align-items: left;
 }
-.row, .container {
-  width: 80%;
-}*/
 
 .toast {
     background-color: #51a351;
@@ -100,9 +92,6 @@ a:hover {
   background-color: grey;
 }
 
-/*.btn:hover, .btn-lg:hover {
-  background-color: #ef5350;
-}*/
 .card-title {
   font-size: 2rem;
 }
@@ -143,13 +132,6 @@ a:hover {
 .edit-container {
   max-width: 500px;
   margin: auto;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: none;
 }
 
 @media only screen and (min-width: 993px) {
